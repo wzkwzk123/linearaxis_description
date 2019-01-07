@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<robot name="linearaxis" 
+  xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- BASE -->
+  <link name ="base_link"/>
+  <!-- Import Axis -->
+  <xacro:include filename="$(find linearaxis_description)/urdf/linearaxis.macro.xacro" ns="la"/>
+  <!--Axis Position-->
+  <xacro:la.axis prefix="linear" parent="base_link" size="long">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </xacro:la.axis>
+</robot>
