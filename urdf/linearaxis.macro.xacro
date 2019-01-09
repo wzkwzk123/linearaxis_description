@@ -53,7 +53,7 @@
             <parent link="${prefix}axis"/>
             <child link="${prefix}reference"/>
             <limit effort="1000" velocity="1.0" lower="${axis_bearing_length + axis_table_length/2.}" upper="${axis_length - axis_bearing_length - axis_table_length/2. - axis_gearbox_length}"/>
-            <origin rpy ="0 0 0" xyz="0 ${-axis_width/2.} ${axis_height/2.}"/>
+            <origin rpy ="0 0 0" xyz="0 ${-axis_width/2. - 0.01} ${axis_height/2.-0.016}"/>
         </joint>
     </xacro:macro>
 </robot>

@@ -6,7 +6,7 @@
   <!-- Import Axis -->
   <xacro:include filename="$(find linearaxis_description)/urdf/linearaxis.macro.xacro" ns="la"/>
   <!--Axis Position-->
-  <xacro:la.axis prefix="linear" parent="base_link" size="long">
+  <xacro:la.axis prefix="robot_" parent="base_link" size="long">
     <origin xyz="0 0 0" rpy="0 0 0"/>
   </xacro:la.axis>
 </robot>
