@@ -7,18 +7,24 @@
         <!-- AXIS Details -->
         <xacro:property name="axis_width" value="0.186"/>
         <xacro:property name="axis_height" value="0.3748"/>
-        <xacro:property name="axis_long_length" value="2.299"/>
+        <xacro:property name="axis_long_length" value="2.6"/>
         <xacro:property name="axis_short_length" value="2.299"/>
 
-        <xacro:property name="axis_table_length" value="0.28013"/>
-        <xacro:property name="axis_bearing_length" value="0.039"/>
-        <xacro:property name="axis_gearbox_length" value="0.082"/>
+        <xacro:property name="axis_table_length" value="0.2883"/>
+        <xacro:property name="axis_short_bearing_length" value="0.039"/>
+        <xacro:property name="axis_long_bearing_length" value="0.14"/>
+        <xacro:property name="axis_short_gearbox_length" value="0.082"/>
+        <xacro:property name="axis_long_gearbox_length" value="0.0"/>
 
         <xacro:if value="${size == 'short'}">
             <xacro:property name="axis_length" value="${axis_short_length}"/>
+            <xacro:property name="axis_bearing_length" value="${axis_short_bearing_length}"/>
+            <xacro:property name="axis_gearbox_length" value="${axis_short_gearbox_length}"/>
         </xacro:if>
         <xacro:unless value="${size == 'short'}">
             <xacro:property name="axis_length" value="${axis_long_length}"/>
+            <xacro:property name="axis_bearing_length" value="${axis_long_bearing_length}"/>
+            <xacro:property name="axis_gearbox_length" value="${axis_long_gearbox_length}"/>
         </xacro:unless>
         
         <!-- AXIS -->
